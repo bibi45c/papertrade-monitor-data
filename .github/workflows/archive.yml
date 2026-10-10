@@ -1,0 +1,46 @@
+name: Archive public market data
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+    inputs:
+      full:
+        description: Recheck all available D1 history
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: market-data-archive
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify archive logic
+        run: python -m unittest discover -s test -v
+      - name: Pull full minute snapshots
+        env:
+          FULL_RECHECK: ${{ inputs.full }}
+        run: |
+          if [ "$FULL_RECHECK" = 'true' ]; then
+            python scripts/archive.py --full
+          else
+            python scripts/archive.py
+          fi
+      - name: Commit changed data
+        shell: bash
+        run: |
+          git add snapshots manifest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Archive public Papertrade market snapshots'
+          git push origin HEAD:main

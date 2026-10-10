@@ -1,0 +1,47 @@
+{
+  "checkpoint": {
+    "d1Count": 251,
+    "d1LatestAt": 1791659880000,
+    "d1OldestAt": 1791644880000,
+    "matchedCount": 251,
+    "sha256": "b9921dd5108208e2b43197356dbf8d4baf9a543d1be28c59e686ba884ee7cfed"
+  },
+  "count": 251,
+  "firstAt": 1791644880000,
+  "gaps": [],
+  "lastAt": 1791659880000,
+  "sha256": "b9921dd5108208e2b43197356dbf8d4baf9a543d1be28c59e686ba884ee7cfed",
+  "shards": [
+    {
+      "count": 52,
+      "path": "snapshots/2026/10/10/15.jsonl.gz",
+      "sha256": "88fef7711f561535274f53ec1268a262a8ab099cdd6aa7dbcb411b1b2a302500"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/10/16.jsonl.gz",
+      "sha256": "5f1a8934a221592307251ce7ae1165c807ccc1fcebcdd07363b3704442f4bcf2"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/10/17.jsonl.gz",
+      "sha256": "53f080d9143032f8627cb51ca2daa2ee45cff13d8fd66813f083e302fae8ef2f"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/10/18.jsonl.gz",
+      "sha256": "9c943de6301d9d4f1a5d96fdc2f7a4f783886c889d31bc86a9466c124d201a82"
+    },
+    {
+      "count": 19,
+      "path": "snapshots/2026/10/10/19.jsonl.gz",
+      "sha256": "4322b356ecff61932499cfaf98099594c33ad1254b27cd68511fcecd3b2853c7"
+    }
+  ],
+  "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
+  "sourceFailures": {
+    "paperBbo": 4
+  },
+  "timezone": "UTC",
+  "version": 1
+}
