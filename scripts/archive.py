@@ -115,6 +115,10 @@ def merge_rows(root, rows):
             added += at not in existing
             existing[at] = row
         content = b''.join(canonical(existing[k]) for k in sorted(existing))
+        # Compare uncompressed content before encoding. gzip headers can differ
+        # between Windows/Python and Linux/Python despite identical payloads.
+        if path.exists() and gzip.decompress(path.read_bytes()) == content:
+            continue
         compressed = gzip.compress(content, compresslevel=9, mtime=0)
         if not path.exists() or path.read_bytes() != compressed:
             path.parent.mkdir(parents=True, exist_ok=True)
@@ -125,12 +129,13 @@ def merge_rows(root, rows):
 
 
 def manifest_for(root, previous=None):
-    shards = []; times = []; failures = {}; digest = hashlib.sha256()
+    shards = []; times = []; failures = {}; source_counts = {}; digest = hashlib.sha256()
     for path in sorted((root / 'snapshots').glob('*/*/*/*.jsonl.gz')):
         rows = read_shard(path); content = b''.join(canonical(row) for row in rows)
         for row in rows:
             times.append(validate_row(row)); digest.update(canonical(row))
             for name, status in row['snapshot'].get('sources', {}).items():
+                source_counts[name] = source_counts.get(name, 0) + 1
                 if status.get('ok') is not True:
                     failures[name] = failures.get(name, 0) + 1
         shards.append({'path': path.relative_to(root).as_posix(), 'count': len(rows), 'sha256': hashlib.sha256(content).hexdigest()})
@@ -138,7 +143,8 @@ def manifest_for(root, previous=None):
         raise ValueError('Duplicate or out-of-order archived minutes')
     gaps = [{'after': a, 'before': b, 'missingMinutes': (b - a) // MINUTE - 1} for a, b in zip(times, times[1:]) if b - a > MINUTE]
     result = {'version': 1, 'source': DEFAULT_URL + '/api/archive', 'timezone': 'UTC', 'count': len(times), 'firstAt': times[0] if times else None,
-              'lastAt': times[-1] if times else None, 'sha256': digest.hexdigest(), 'sourceFailures': failures, 'gaps': gaps, 'shards': shards}
+              'lastAt': times[-1] if times else None, 'sha256': digest.hexdigest(), 'sourceFailures': failures,
+              'sourceMissing': {name: len(times) - count for name, count in source_counts.items() if count < len(times)}, 'gaps': gaps, 'shards': shards}
     if previous and 'checkpoint' in previous:
         result['checkpoint'] = previous['checkpoint']
     return result
@@ -182,7 +188,7 @@ def archive(root, base_url=DEFAULT_URL, fetcher=fetch_page, through=None, public
                             'matchedCount': matched, 'sha256': online_digest.hexdigest()}
     encoded = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + '\n'
     temp = manifest_path.with_suffix('.tmp'); temp.write_text(encoded, encoding='utf-8'); temp.replace(manifest_path)
-    print(json.dumps({'added': added, 'archived': result['count'], 'd1Count': available['count'], 'matched': matched, 'sourceFailures': result['sourceFailures'], 'gaps': result['gaps']}))
+    print(json.dumps({'added': added, 'archived': result['count'], 'd1Count': available['count'], 'matched': matched, 'sourceFailures': result['sourceFailures'], 'sourceMissing': result['sourceMissing'], 'gaps': result['gaps']}))
     return result
 
 

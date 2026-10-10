@@ -40,6 +40,21 @@ class ArchiveTest(unittest.TestCase):
             result = module.manifest_for(root)
             self.assertEqual(result['count'], 2); self.assertEqual(result['gaps'][0]['missingMinutes'], 1)
 
+    def test_different_gzip_header_does_not_rewrite_identical_rows(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = pathlib.Path(folder); row = self.row(60_000); module.merge_rows(root, [row])
+            path = module.shard_path(root, 60_000); content = bytearray(path.read_bytes()); content[9] = 3 if content[9] != 3 else 255
+            path.write_bytes(content); module.merge_rows(root, [row]); self.assertEqual(path.read_bytes(), bytes(content))
+
+    def test_missing_source_and_count_mismatch_are_distinct(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = pathlib.Path(folder); first = self.row(60_000); second = self.row(120_000); second['snapshot']['sources'] = {}
+            module.merge_rows(root, [first, second]); self.assertEqual(module.manifest_for(root)['sourceMissing'], {'paperBbo': 1})
+            def fetch(base, after, through, public_dns):
+                return {'version': 1, 'through': through, 'rows': [], 'nextAfter': after, 'complete': True, 'available': {'oldestAt': 60_000, 'latestAt': 120_000, 'count': 3}}
+            with self.assertRaisesRegex(ValueError, 'count does not match'): module.archive(root, fetcher=fetch, through=300_000)
+            self.assertFalse((root / 'manifest.json').exists())
+
     def test_invalid_cursor_and_count_do_not_publish_manifest(self):
         with tempfile.TemporaryDirectory() as folder:
             def fetch(*args): return {'version': 1, 'through': 300_000, 'rows': [], 'nextAfter': 0, 'complete': False, 'available': {'count': 0}}

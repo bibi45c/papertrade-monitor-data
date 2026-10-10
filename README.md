@@ -5,7 +5,7 @@ Private archive for the public read-only [Papertrade monitor](https://papertrade
 D1 is the primary store, collecting once per minute and retaining 90 days. This repository pulls full stored snapshots each hour at minute 23 UTC. GitHub scheduling is best effort; a delayed run catches up and rechecks the preceding 48 hours. Archived files are retained after D1 retention expires. Repository visibility does not make the underlying public market source private.
 
 - `snapshots/YYYY/MM/DD/HH.jsonl.gz`: UTC hourly gzip shards. Each line contains the database minute `collectedAt` and the full original `snapshot`, including raw amount strings, order books, source timestamps and failures.
-- `manifest.json`: record count, first/last minute, uncompressed SHA-256 checksums, source failures, gaps and the matching D1 checkpoint. Missing fields stay null and failed reads are preserved. No historical value is synthesized.
+- `manifest.json`: record count, first/last minute, uncompressed SHA-256 checksums, source failures, absent source counts, gaps and the matching D1 checkpoint. Missing fields stay null and failed reads are preserved. No historical value is synthesized.
 - `.github/workflows/archive.yml`: hourly pull and manual runs. Only this repository's built-in `GITHUB_TOKEN` writes commits; no wallet, trading key, Cloudflare token or personal GitHub token is stored.
 
 Run locally with Python 3.12 or later, using only its standard library:
