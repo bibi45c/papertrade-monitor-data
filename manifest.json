@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 1472,
-    "d1LatestAt": 1791782700000,
+    "d1Count": 1599,
+    "d1LatestAt": 1791809700000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 1472,
-    "sha256": "d3bf407426084848da061931f2152a76ee8da1c4e48d0725cad4d404542c7923"
+    "matchedCount": 1599,
+    "sha256": "13bf568f0797f1abb449ed9030b2a2c5a99961fd71bbb0ffec063c44db28318e"
   },
-  "count": 1472,
+  "count": 1599,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -83,10 +83,25 @@
       "after": 1791781140000,
       "before": 1791781260000,
       "missingMinutes": 1
+    },
+    {
+      "after": 1791782700000,
+      "before": 1791802020000,
+      "missingMinutes": 321
+    },
+    {
+      "after": 1791802740000,
+      "before": 1791802860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791806340000,
+      "before": 1791806460000,
+      "missingMinutes": 1
     }
   ],
-  "lastAt": 1791782700000,
-  "sha256": "d3bf407426084848da061931f2152a76ee8da1c4e48d0725cad4d404542c7923",
+  "lastAt": 1791809700000,
+  "sha256": "13bf568f0797f1abb449ed9030b2a2c5a99961fd71bbb0ffec063c44db28318e",
   "shards": [
     {
       "count": 52,
@@ -222,6 +237,21 @@
       "count": 25,
       "path": "snapshots/2026/10/12/05.jsonl.gz",
       "sha256": "073481705b6985ae3e11ca57ce8ce051537de82b31cc570933dfae6e587cfa9a"
+    },
+    {
+      "count": 13,
+      "path": "snapshots/2026/10/12/10.jsonl.gz",
+      "sha256": "c6eb232029e01413a0919160bfaedf706c64c927b53e5a6ff8b914b8a2e04dc3"
+    },
+    {
+      "count": 59,
+      "path": "snapshots/2026/10/12/11.jsonl.gz",
+      "sha256": "a5bc5f37ea71df75e39f9b33aa9fb884461d69e5c479c9a161e34549d1789768"
+    },
+    {
+      "count": 55,
+      "path": "snapshots/2026/10/12/12.jsonl.gz",
+      "sha256": "87508b0df10445ede8a60620c7786777f0ee7ffed46ab6f329d45fb676382863"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
@@ -231,15 +261,15 @@
     "book_HYPE": 3,
     "context": 1,
     "executionQueue": 1,
-    "jumps": 708,
-    "paperBbo": 18
+    "jumps": 835,
+    "paperBbo": 19
   },
   "sourceMissing": {
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
     "protocolHistory": 764,
-    "web": 1458
+    "web": 1583
   },
   "timezone": "UTC",
   "version": 1
