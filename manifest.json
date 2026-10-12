@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 1337,
-    "d1LatestAt": 1791728100000,
+    "d1Count": 1472,
+    "d1LatestAt": 1791782700000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 1337,
-    "sha256": "36a970fb9d6694946bf489c3cfc8c48ec3e5616aa6b4781698349b8e61a03c36"
+    "matchedCount": 1472,
+    "sha256": "d3bf407426084848da061931f2152a76ee8da1c4e48d0725cad4d404542c7923"
   },
-  "count": 1337,
+  "count": 1472,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -63,10 +63,30 @@
       "after": 1791727140000,
       "before": 1791727260000,
       "missingMinutes": 1
+    },
+    {
+      "after": 1791728100000,
+      "before": 1791774480000,
+      "missingMinutes": 772
+    },
+    {
+      "after": 1791775740000,
+      "before": 1791775860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791777540000,
+      "before": 1791777660000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791781140000,
+      "before": 1791781260000,
+      "missingMinutes": 1
     }
   ],
-  "lastAt": 1791728100000,
-  "sha256": "36a970fb9d6694946bf489c3cfc8c48ec3e5616aa6b4781698349b8e61a03c36",
+  "lastAt": 1791782700000,
+  "sha256": "d3bf407426084848da061931f2152a76ee8da1c4e48d0725cad4d404542c7923",
   "shards": [
     {
       "count": 52,
@@ -187,16 +207,31 @@
       "count": 15,
       "path": "snapshots/2026/10/11/14.jsonl.gz",
       "sha256": "2dcfe9ef49c318454f33f8664a9312af006a5f253af58fefa3955e262bd2efd8"
+    },
+    {
+      "count": 51,
+      "path": "snapshots/2026/10/12/03.jsonl.gz",
+      "sha256": "c755ec1ab5b8e17bd600cc8907c147f4ea0df2dcd3b2c80bf68a892dc977134d"
+    },
+    {
+      "count": 59,
+      "path": "snapshots/2026/10/12/04.jsonl.gz",
+      "sha256": "aa14e4ca5ca2bd3fca0f5c0f018473d9f4aa8c6951a1a23f9e96f72a1b994d7b"
+    },
+    {
+      "count": 25,
+      "path": "snapshots/2026/10/12/05.jsonl.gz",
+      "sha256": "073481705b6985ae3e11ca57ce8ce051537de82b31cc570933dfae6e587cfa9a"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
   "sourceFailures": {
     "book_BTC": 1,
-    "book_ETH": 2,
+    "book_ETH": 3,
     "book_HYPE": 3,
     "context": 1,
     "executionQueue": 1,
-    "jumps": 573,
+    "jumps": 708,
     "paperBbo": 18
   },
   "sourceMissing": {
@@ -204,7 +239,7 @@
     "governance": 764,
     "jumps": 764,
     "protocolHistory": 764,
-    "web": 1326
+    "web": 1458
   },
   "timezone": "UTC",
   "version": 1
