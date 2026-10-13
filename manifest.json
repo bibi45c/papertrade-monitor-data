@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 1966,
-    "d1LatestAt": 1791852660000,
+    "d1Count": 2301,
+    "d1LatestAt": 1791877800000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 1966,
-    "sha256": "f285c3a263a1a603b2d6326cec7d748296a126effde1015583106e4b05b3de72"
+    "matchedCount": 2301,
+    "sha256": "8652f0c68a2a64175bc3df29eb403efb9257a02769143d13657ff7019013cb8c"
   },
-  "count": 1966,
+  "count": 2301,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -108,10 +108,70 @@
       "after": 1791831540000,
       "before": 1791831660000,
       "missingMinutes": 1
+    },
+    {
+      "after": 1791853140000,
+      "before": 1791853260000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791856740000,
+      "before": 1791856860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791858540000,
+      "before": 1791858660000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791860340000,
+      "before": 1791860460000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791863940000,
+      "before": 1791864060000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791864240000,
+      "before": 1791868680000,
+      "missingMinutes": 73
+    },
+    {
+      "after": 1791869340000,
+      "before": 1791869460000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791871140000,
+      "before": 1791871260000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791872940000,
+      "before": 1791873060000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791874740000,
+      "before": 1791874860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791875640000,
+      "before": 1791875760000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1791876540000,
+      "before": 1791876660000,
+      "missingMinutes": 1
     }
   ],
-  "lastAt": 1791852660000,
-  "sha256": "f285c3a263a1a603b2d6326cec7d748296a126effde1015583106e4b05b3de72",
+  "lastAt": 1791877800000,
+  "sha256": "8652f0c68a2a64175bc3df29eb403efb9257a02769143d13657ff7019013cb8c",
   "shards": [
     {
       "count": 52,
@@ -294,9 +354,44 @@
       "sha256": "35aed2354a01c10c2f8c0e9fb66650c5b093d041c1123a5cb14f447aab90df41"
     },
     {
-      "count": 52,
+      "count": 60,
       "path": "snapshots/2026/10/13/00.jsonl.gz",
-      "sha256": "2b9bdcd714e2c52a4548398e304353da6e10231c7d455db0489ae555e4d3ea22"
+      "sha256": "d64ae6b72e0e1632f044e9d717d5a062ae58821e24e76781c9a2f08ab6f966f3"
+    },
+    {
+      "count": 59,
+      "path": "snapshots/2026/10/13/01.jsonl.gz",
+      "sha256": "2a99ad20240a8358c86144500a1eeffc4dda0a98a4ad4a1b0b6778f12cb5b26b"
+    },
+    {
+      "count": 58,
+      "path": "snapshots/2026/10/13/02.jsonl.gz",
+      "sha256": "026a4b46bbe56bc627f777fd82c968ef5b95ad4f0a05de1bc87d37e299985035"
+    },
+    {
+      "count": 59,
+      "path": "snapshots/2026/10/13/03.jsonl.gz",
+      "sha256": "5508b3820808a6a32dc7d76cd7a47b55f4f8a389c4fabe87b84065053a529a51"
+    },
+    {
+      "count": 4,
+      "path": "snapshots/2026/10/13/04.jsonl.gz",
+      "sha256": "8a4fddb9722aaf98854fe3b433efc4ca9edfadd37d7632b811fd34000237fc55"
+    },
+    {
+      "count": 41,
+      "path": "snapshots/2026/10/13/05.jsonl.gz",
+      "sha256": "e121b9cd8e944546efc70a1853a1c484c8b2edf45690951fd75b5bbe827d172b"
+    },
+    {
+      "count": 58,
+      "path": "snapshots/2026/10/13/06.jsonl.gz",
+      "sha256": "69f57c876fbd2e26b4c67ac1d88b792c2a306ad2b7357b92fa2b3cfa56efeb2a"
+    },
+    {
+      "count": 48,
+      "path": "snapshots/2026/10/13/07.jsonl.gz",
+      "sha256": "5a856648d26354a5b37e3839300021b03950f6fc0ba10f15de3741d970eaff52"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
@@ -307,15 +402,15 @@
     "context": 1,
     "executionQueue": 1,
     "governance": 1,
-    "jumps": 1202,
-    "paperBbo": 19
+    "jumps": 1537,
+    "paperBbo": 20
   },
   "sourceMissing": {
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
     "protocolHistory": 764,
-    "web": 1944
+    "web": 2274
   },
   "timezone": "UTC",
   "version": 1
