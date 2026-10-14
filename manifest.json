@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 3966,
-    "d1LatestAt": 1791998520000,
+    "d1Count": 4175,
+    "d1LatestAt": 1792011060000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 3966,
-    "sha256": "92cd41b23dd79cc9a393c8acbcc5d0824272a1c7e6105d210d3c8de7338411ec"
+    "matchedCount": 4175,
+    "sha256": "e426befa5477e343da3355c30a0638052a008eaf3686882825212961f3d9c361"
   },
-  "count": 3966,
+  "count": 4175,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -270,8 +270,8 @@
       "missingMinutes": 68
     }
   ],
-  "lastAt": 1791998520000,
-  "sha256": "92cd41b23dd79cc9a393c8acbcc5d0824272a1c7e6105d210d3c8de7338411ec",
+  "lastAt": 1792011060000,
+  "sha256": "e426befa5477e343da3355c30a0638052a008eaf3686882825212961f3d9c361",
   "shards": [
     {
       "count": 52,
@@ -654,24 +654,39 @@
       "sha256": "aacf7e865b9d4a2c7410ca4b2ccba9c694e4ffdba2d777b91afa98ec1174bbe2"
     },
     {
-      "count": 23,
+      "count": 60,
       "path": "snapshots/2026/10/14/17.jsonl.gz",
-      "sha256": "de7c4aa0ce1b8a935124200ffc0d013972d3910f8bd2d263586569da33d1cb94"
+      "sha256": "b6d223b8ea75d321dc0b286bd2a6a89fdefe6ad891c502b90fbdbc06c4eae403"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/14/18.jsonl.gz",
+      "sha256": "c40c9363cda0a9e938094b4e80c392a04959dfcaa5f5706299c171638f26bba4"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/14/19.jsonl.gz",
+      "sha256": "9391ffa0bb052136e62fef1589d1d27be6ae1a69d0f05ca8640a8c1a72059841"
+    },
+    {
+      "count": 52,
+      "path": "snapshots/2026/10/14/20.jsonl.gz",
+      "sha256": "b174b63cb6237a0edc849fcbd26fb501f693559007ec721ff1e3a4f84ae04360"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
   "sourceFailures": {
-    "book_BTC": 2,
-    "book_ETH": 5,
+    "book_BTC": 6,
+    "book_ETH": 7,
     "book_HYPE": 3,
-    "context": 2,
+    "context": 5,
     "executionQueue": 971,
-    "governance": 623,
-    "jumps": 3202,
-    "paperBbo": 157
+    "governance": 832,
+    "jumps": 3411,
+    "paperBbo": 175
   },
   "sourceMissing": {
-    "book_HYPE": 553,
+    "book_HYPE": 762,
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
