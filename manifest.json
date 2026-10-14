@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 2834,
-    "d1LatestAt": 1791926520000,
+    "d1Count": 3018,
+    "d1LatestAt": 1791937560000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 2834,
-    "sha256": "3985c5e3c09bf70bfd78323c16e2fc5cdd50049e0d6438942170e6c684b4e17f"
+    "matchedCount": 3018,
+    "sha256": "0d900ef8bab60781b7795b9a31204932c468d599012ba17edd765b4814c9c859"
   },
-  "count": 2834,
+  "count": 3018,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -265,8 +265,8 @@
       "missingMinutes": 64
     }
   ],
-  "lastAt": 1791926520000,
-  "sha256": "3985c5e3c09bf70bfd78323c16e2fc5cdd50049e0d6438942170e6c684b4e17f",
+  "lastAt": 1791937560000,
+  "sha256": "0d900ef8bab60781b7795b9a31204932c468d599012ba17edd765b4814c9c859",
   "shards": [
     {
       "count": 52,
@@ -549,9 +549,24 @@
       "sha256": "a2c35f4134a834be600fb13f30c5250688cfe882dc9da02cf542f5ee34bdec34"
     },
     {
-      "count": 23,
+      "count": 60,
       "path": "snapshots/2026/10/13/21.jsonl.gz",
-      "sha256": "3ed97ebd041bc04d67bebb5876e07ea09e3df0d51cc6265261d6b90993cf2179"
+      "sha256": "048e3364473e46f89b75a6d089caf762a736c1d3687aff4d14eb327223a209d9"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/13/22.jsonl.gz",
+      "sha256": "72293477acea7feaeaaf098e551c982310530592fe47d77e2e6216fcb48e098f"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/13/23.jsonl.gz",
+      "sha256": "d8afc8fc78292e71833d4c7815a9359a7a9994ed320a34c1974038a49b1a6c46"
+    },
+    {
+      "count": 27,
+      "path": "snapshots/2026/10/14/00.jsonl.gz",
+      "sha256": "ffa6c46d09d61d590b5ae6eb2e9b4f67d31883bef1b94d1720b24a47afe399b6"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
@@ -560,9 +575,9 @@
     "book_ETH": 4,
     "book_HYPE": 3,
     "context": 1,
-    "executionQueue": 392,
+    "executionQueue": 576,
     "governance": 81,
-    "jumps": 2070,
+    "jumps": 2254,
     "paperBbo": 92
   },
   "sourceMissing": {
@@ -570,7 +585,7 @@
     "governance": 764,
     "jumps": 764,
     "protocolHistory": 764,
-    "web": 2797
+    "web": 2978
   },
   "timezone": "UTC",
   "version": 1
