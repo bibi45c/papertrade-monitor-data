@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 4356,
-    "d1LatestAt": 1792022280000,
+    "d1Count": 4639,
+    "d1LatestAt": 1792039980000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 4356,
-    "sha256": "5a35a268fa468afcc480d1a4164bbd761d5e20f06b21975e742ff6140fd2ea85"
+    "matchedCount": 4639,
+    "sha256": "16af54f49cbe2e075f0f5fd69470c7dca08e0280bbe4bab336661ba8c6f28de3"
   },
-  "count": 4356,
+  "count": 4639,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -298,10 +298,70 @@
       "after": 1792018740000,
       "before": 1792018860000,
       "missingMinutes": 1
+    },
+    {
+      "after": 1792022340000,
+      "before": 1792022460000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792025940000,
+      "before": 1792026060000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792027740000,
+      "before": 1792027860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792029540000,
+      "before": 1792029660000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792030740000,
+      "before": 1792030860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792033140000,
+      "before": 1792033260000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792033440000,
+      "before": 1792033560000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792033740000,
+      "before": 1792033860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792035540000,
+      "before": 1792035660000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792035840000,
+      "before": 1792035960000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792036740000,
+      "before": 1792036860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792038540000,
+      "before": 1792038660000,
+      "missingMinutes": 1
     }
   ],
-  "lastAt": 1792022280000,
-  "sha256": "5a35a268fa468afcc480d1a4164bbd761d5e20f06b21975e742ff6140fd2ea85",
+  "lastAt": 1792039980000,
+  "sha256": "16af54f49cbe2e075f0f5fd69470c7dca08e0280bbe4bab336661ba8c6f28de3",
   "shards": [
     {
       "count": 52,
@@ -714,9 +774,34 @@
       "sha256": "135832a623bcd68cffa691744bd0780802542ed6f067cfd6d9af6372ac58fe48"
     },
     {
-      "count": 58,
+      "count": 59,
       "path": "snapshots/2026/10/14/23.jsonl.gz",
-      "sha256": "a48e07545f095ffa597851030d99537456a64289877dfacb77b60f6ef41ed633"
+      "sha256": "9f860de0f53d2a342526e4a3a2535275d37a5539554020d23ce60f454f6fcfdf"
+    },
+    {
+      "count": 59,
+      "path": "snapshots/2026/10/15/00.jsonl.gz",
+      "sha256": "269a65e9e1fe97a779c3ae78d8c3b3d4fc2c503339caec258453cf076a8864fc"
+    },
+    {
+      "count": 58,
+      "path": "snapshots/2026/10/15/01.jsonl.gz",
+      "sha256": "30322a728925425d1d5586eac2cc0ee94330e7316881b27dcb628cfd78fbc3f8"
+    },
+    {
+      "count": 58,
+      "path": "snapshots/2026/10/15/02.jsonl.gz",
+      "sha256": "3d276170b4c29b60c5ecfcf5bb1bf4840206198dd7632d2878d21911665351b0"
+    },
+    {
+      "count": 55,
+      "path": "snapshots/2026/10/15/03.jsonl.gz",
+      "sha256": "149d2ad273300483f430368cdbff3ce86b4b53d9b515a7d957f06d5f84178d95"
+    },
+    {
+      "count": 52,
+      "path": "snapshots/2026/10/15/04.jsonl.gz",
+      "sha256": "55b97e699cba55078d7c39ea45859bedf5e42d6b9aa8ea8c6c24ba718aeaf7eb"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
@@ -726,12 +811,13 @@
     "book_HYPE": 3,
     "context": 6,
     "executionQueue": 972,
-    "governance": 1005,
-    "jumps": 3592,
-    "paperBbo": 182
+    "governance": 1286,
+    "jumps": 3875,
+    "paperBbo": 372,
+    "trading": 189
   },
   "sourceMissing": {
-    "book_HYPE": 943,
+    "book_HYPE": 1226,
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
