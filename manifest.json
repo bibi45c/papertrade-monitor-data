@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 4639,
-    "d1LatestAt": 1792039980000,
+    "d1Count": 4929,
+    "d1LatestAt": 1792058760000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 4639,
-    "sha256": "16af54f49cbe2e075f0f5fd69470c7dca08e0280bbe4bab336661ba8c6f28de3"
+    "matchedCount": 4929,
+    "sha256": "cfdb0544e4dedd5391af960876e46314ecc2acbb80cc01adabbd379d98fc1ac0"
   },
-  "count": 4639,
+  "count": 4929,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -358,10 +358,125 @@
       "after": 1792038540000,
       "before": 1792038660000,
       "missingMinutes": 1
+    },
+    {
+      "after": 1792040340000,
+      "before": 1792040460000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792040640000,
+      "before": 1792040760000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792042140000,
+      "before": 1792042260000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792043940000,
+      "before": 1792044060000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792044240000,
+      "before": 1792044360000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792045140000,
+      "before": 1792045260000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792045740000,
+      "before": 1792045860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792046940000,
+      "before": 1792047060000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792047240000,
+      "before": 1792047360000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792047540000,
+      "before": 1792047660000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792048140000,
+      "before": 1792048260000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792048440000,
+      "before": 1792048560000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792049340000,
+      "before": 1792049460000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792051140000,
+      "before": 1792051260000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792052040000,
+      "before": 1792052160000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792052940000,
+      "before": 1792053060000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792054140000,
+      "before": 1792054260000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792055940000,
+      "before": 1792056060000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792056540000,
+      "before": 1792056660000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792056840000,
+      "before": 1792056960000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792057140000,
+      "before": 1792057260000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792057740000,
+      "before": 1792057860000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792058340000,
+      "before": 1792058460000,
+      "missingMinutes": 1
     }
   ],
-  "lastAt": 1792039980000,
-  "sha256": "16af54f49cbe2e075f0f5fd69470c7dca08e0280bbe4bab336661ba8c6f28de3",
+  "lastAt": 1792058760000,
+  "sha256": "cfdb0544e4dedd5391af960876e46314ecc2acbb80cc01adabbd379d98fc1ac0",
   "shards": [
     {
       "count": 52,
@@ -799,25 +914,55 @@
       "sha256": "149d2ad273300483f430368cdbff3ce86b4b53d9b515a7d957f06d5f84178d95"
     },
     {
-      "count": 52,
+      "count": 58,
       "path": "snapshots/2026/10/15/04.jsonl.gz",
-      "sha256": "55b97e699cba55078d7c39ea45859bedf5e42d6b9aa8ea8c6c24ba718aeaf7eb"
+      "sha256": "eed06a7a4fc0d45f718a64c54ab99c55e4f6c218e05c1a735cc5c763d7bf4286"
+    },
+    {
+      "count": 57,
+      "path": "snapshots/2026/10/15/05.jsonl.gz",
+      "sha256": "2c65e0ce94809e817c259e25972d2a9dfeccf6b45cdab342c362a2f46e74880e"
+    },
+    {
+      "count": 54,
+      "path": "snapshots/2026/10/15/06.jsonl.gz",
+      "sha256": "68af53f2eec40beec3e29f40c54f30de958879c1559532dcddbe9056cb5dc4bd"
+    },
+    {
+      "count": 56,
+      "path": "snapshots/2026/10/15/07.jsonl.gz",
+      "sha256": "cb818eb3e0af8d6794dcbd54d7886b2aafdcdc31158607d974d1d3a2fd570317"
+    },
+    {
+      "count": 56,
+      "path": "snapshots/2026/10/15/08.jsonl.gz",
+      "sha256": "91f9a8b4d2032be60a6bc598fd67399487df52ad31bf423011689cb144171d36"
+    },
+    {
+      "count": 55,
+      "path": "snapshots/2026/10/15/09.jsonl.gz",
+      "sha256": "8b2178135bcd9dd86549635375c41155f68f5aafbb80cbf85ca662a4b41110f1"
+    },
+    {
+      "count": 6,
+      "path": "snapshots/2026/10/15/10.jsonl.gz",
+      "sha256": "5ee699c152717b0fecc990afb273534f4a25f238cf3ba5cea07b6c4f1c04be53"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
   "sourceFailures": {
-    "book_BTC": 7,
-    "book_ETH": 8,
+    "book_BTC": 8,
+    "book_ETH": 9,
     "book_HYPE": 3,
-    "context": 6,
+    "context": 7,
     "executionQueue": 972,
-    "governance": 1286,
-    "jumps": 3875,
-    "paperBbo": 372,
-    "trading": 189
+    "governance": 1557,
+    "jumps": 4165,
+    "paperBbo": 651,
+    "trading": 468
   },
   "sourceMissing": {
-    "book_HYPE": 1226,
+    "book_HYPE": 1516,
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
