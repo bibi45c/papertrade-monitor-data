@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 15516,
-    "d1LatestAt": 1792694340000,
+    "d1Count": 15747,
+    "d1LatestAt": 1792708200000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 15516,
-    "sha256": "6e73a9db7343b222c95189eb224988b127af6b154877054ed0fba63a101162c5"
+    "matchedCount": 15747,
+    "sha256": "3bea397f9369288afd506d30140cc91724f082878688b822361711282a8fa838"
   },
-  "count": 15516,
+  "count": 15747,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -505,8 +505,8 @@
       "missingMinutes": 1
     }
   ],
-  "lastAt": 1792694340000,
-  "sha256": "6e73a9db7343b222c95189eb224988b127af6b154877054ed0fba63a101162c5",
+  "lastAt": 1792708200000,
+  "sha256": "3bea397f9369288afd506d30140cc91724f082878688b822361711282a8fa838",
   "shards": [
     {
       "count": 52,
@@ -1854,9 +1854,29 @@
       "sha256": "e27833f8cbba439a6a9691f8c324ec81299b4c46fa0a80a3ce56650167a95fc1"
     },
     {
-      "count": 40,
+      "count": 60,
       "path": "snapshots/2026/10/22/18.jsonl.gz",
-      "sha256": "142b1c543208342f1b36bc5420465bfdca60178b0464e9ff4557d1c1d05693ac"
+      "sha256": "ac83b41abce8d1aff45c72a29fb4b9dad0052ac892b2305bdf8493c6a7241112"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/22/19.jsonl.gz",
+      "sha256": "99a1c6ff33bc103a7fa11224a9c3379ec3dc271a3f62a11c3f5798d893412ce0"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/22/20.jsonl.gz",
+      "sha256": "01b815616e34ffa3bbfdb706b6053acd7a8ae508a1ba16f901044382953d1f4e"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/22/21.jsonl.gz",
+      "sha256": "e8c5a329c6fe7383b65029afd1285acdeaf984828dd58ca32d1881e9f406e6ca"
+    },
+    {
+      "count": 31,
+      "path": "snapshots/2026/10/22/22.jsonl.gz",
+      "sha256": "3e8b9c4dd1e2792deed5ea92cad6e56862bf5a965a51e175896eaeb160e7285e"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
@@ -1865,15 +1885,15 @@
     "book_ETH": 22,
     "book_HYPE": 3,
     "context": 19,
-    "executionQueue": 1245,
+    "executionQueue": 1246,
     "governance": 1696,
-    "jumps": 14752,
+    "jumps": 14983,
     "paperActivity": 1,
     "paperBbo": 657,
     "trading": 469
   },
   "sourceMissing": {
-    "book_HYPE": 12103,
+    "book_HYPE": 12334,
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
