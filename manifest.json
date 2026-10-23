@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 15747,
-    "d1LatestAt": 1792708200000,
+    "d1Count": 15935,
+    "d1LatestAt": 1792719600000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 15747,
-    "sha256": "3bea397f9369288afd506d30140cc91724f082878688b822361711282a8fa838"
+    "matchedCount": 15935,
+    "sha256": "6ca9ec6a82ba2ac74a86f64149d89b26d1737481b2047ba3c32ecf9bf5051a34"
   },
-  "count": 15747,
+  "count": 15935,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -503,10 +503,20 @@
       "after": 1792618440000,
       "before": 1792618560000,
       "missingMinutes": 1
+    },
+    {
+      "after": 1792716240000,
+      "before": 1792716360000,
+      "missingMinutes": 1
+    },
+    {
+      "after": 1792717320000,
+      "before": 1792717440000,
+      "missingMinutes": 1
     }
   ],
-  "lastAt": 1792708200000,
-  "sha256": "3bea397f9369288afd506d30140cc91724f082878688b822361711282a8fa838",
+  "lastAt": 1792719600000,
+  "sha256": "6ca9ec6a82ba2ac74a86f64149d89b26d1737481b2047ba3c32ecf9bf5051a34",
   "shards": [
     {
       "count": 52,
@@ -1874,9 +1884,24 @@
       "sha256": "e8c5a329c6fe7383b65029afd1285acdeaf984828dd58ca32d1881e9f406e6ca"
     },
     {
-      "count": 31,
+      "count": 60,
       "path": "snapshots/2026/10/22/22.jsonl.gz",
-      "sha256": "3e8b9c4dd1e2792deed5ea92cad6e56862bf5a965a51e175896eaeb160e7285e"
+      "sha256": "2d17fb6f19cf8a8993f72d65ad1da4628ebf4b77c0105325e0aa84d5176ed2de"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/22/23.jsonl.gz",
+      "sha256": "c74718145ecfdfc59ecd67756423fea97d8d24807689f2dc2c512b002ddd8439"
+    },
+    {
+      "count": 59,
+      "path": "snapshots/2026/10/23/00.jsonl.gz",
+      "sha256": "57038bec4899abcc15a91d30b9d72c69f66c8597cfa98eb5275d281391e77ab4"
+    },
+    {
+      "count": 40,
+      "path": "snapshots/2026/10/23/01.jsonl.gz",
+      "sha256": "426dd095682b0889d7166d3642834da8cef0cf30f02ebc45a13a3aab35820a2b"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
@@ -1887,13 +1912,13 @@
     "context": 19,
     "executionQueue": 1246,
     "governance": 1696,
-    "jumps": 14983,
+    "jumps": 15171,
     "paperActivity": 1,
     "paperBbo": 657,
     "trading": 469
   },
   "sourceMissing": {
-    "book_HYPE": 12334,
+    "book_HYPE": 12522,
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
