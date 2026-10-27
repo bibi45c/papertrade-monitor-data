@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 22388,
-    "d1LatestAt": 1793107440000,
+    "d1Count": 22528,
+    "d1LatestAt": 1793115840000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 22388,
-    "sha256": "893503d4144269ad38b1f12dc9071f7f5b28cbbce246e16e2547706da652c493"
+    "matchedCount": 22528,
+    "sha256": "42ebe80a2ca0beb1804804639bab93179dd8151a3612445fdecfcd7c75e37aa0"
   },
-  "count": 22388,
+  "count": 22528,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -570,8 +570,8 @@
       "missingMinutes": 1
     }
   ],
-  "lastAt": 1793107440000,
-  "sha256": "893503d4144269ad38b1f12dc9071f7f5b28cbbce246e16e2547706da652c493",
+  "lastAt": 1793115840000,
+  "sha256": "42ebe80a2ca0beb1804804639bab93179dd8151a3612445fdecfcd7c75e37aa0",
   "shards": [
     {
       "count": 52,
@@ -2494,9 +2494,19 @@
       "sha256": "feef8f6c9597e241b439430fccff7cb852d4a39b262006b80ba38671d5572741"
     },
     {
-      "count": 25,
+      "count": 60,
       "path": "snapshots/2026/10/27/13.jsonl.gz",
-      "sha256": "a97c4975bec28449b973f3521e3d2f5fb59b0a1c7f205c9fb7525e4d4a3ec5b4"
+      "sha256": "4d7db27f28bf2bc6356372dee15055807583cfabddf58a62a11dcf6e74bc1861"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/10/27/14.jsonl.gz",
+      "sha256": "f3c18c9e291972dbc8d63228424112abcf8677d44724a6a2308ae6783033baf7"
+    },
+    {
+      "count": 45,
+      "path": "snapshots/2026/10/27/15.jsonl.gz",
+      "sha256": "586537dba5a27d2ea1f1747a740cc3ecadc6cb62913c19cba235b417a74a7a1e"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
@@ -2507,14 +2517,14 @@
     "context": 24,
     "executionQueue": 1258,
     "governance": 1701,
-    "jumps": 21624,
+    "jumps": 21764,
     "paperActivity": 2,
     "paperBbo": 658,
     "queue": 1,
     "trading": 469
   },
   "sourceMissing": {
-    "book_HYPE": 18975,
+    "book_HYPE": 19115,
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
