@@ -1,12 +1,12 @@
 {
   "checkpoint": {
-    "d1Count": 22533,
-    "d1LatestAt": 1793293320000,
+    "d1Count": 22535,
+    "d1LatestAt": 1793325660000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 22533,
-    "sha256": "3e637fd27574071e38d218114c7e719a04163d1f4a40168da768122cd3d1514b"
+    "matchedCount": 22535,
+    "sha256": "d50d28164849079b89fca3e893b124013b7ddbb79d820543d31136c98d9119d7"
   },
-  "count": 22533,
+  "count": 22535,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -583,10 +583,20 @@
       "after": 1793289720000,
       "before": 1793293260000,
       "missingMinutes": 58
+    },
+    {
+      "after": 1793293320000,
+      "before": 1793322060000,
+      "missingMinutes": 478
+    },
+    {
+      "after": 1793322060000,
+      "before": 1793325660000,
+      "missingMinutes": 59
     }
   ],
-  "lastAt": 1793293320000,
-  "sha256": "3e637fd27574071e38d218114c7e719a04163d1f4a40168da768122cd3d1514b",
+  "lastAt": 1793325660000,
+  "sha256": "d50d28164849079b89fca3e893b124013b7ddbb79d820543d31136c98d9119d7",
   "shards": [
     {
       "count": 52,
@@ -2537,6 +2547,16 @@
       "count": 2,
       "path": "snapshots/2026/10/29/17.jsonl.gz",
       "sha256": "3aa50d4904e614c65a62f677eea75a9a645b0405fcc222c4e7b9730ad7df2044"
+    },
+    {
+      "count": 1,
+      "path": "snapshots/2026/10/30/01.jsonl.gz",
+      "sha256": "96a5711f2c0306e64f0c27c4d281c3e4691dea95e603a7cbd73337b20733f453"
+    },
+    {
+      "count": 1,
+      "path": "snapshots/2026/10/30/02.jsonl.gz",
+      "sha256": "4a0d5db18bb46b3d8105b9f1a68cc074ff6a2e7e9ce9b521164a2bc7763274b2"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
@@ -2546,15 +2566,15 @@
     "book_HYPE": 3,
     "context": 24,
     "executionQueue": 1258,
-    "governance": 1701,
-    "jumps": 21769,
+    "governance": 1702,
+    "jumps": 21771,
     "paperActivity": 2,
     "paperBbo": 658,
     "queue": 1,
     "trading": 469
   },
   "sourceMissing": {
-    "book_HYPE": 19120,
+    "book_HYPE": 19122,
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
