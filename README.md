@@ -2,11 +2,11 @@
 
 Private archive for the public read-only [Papertrade monitor](https://papertrade-monitor.papertrade-monitor.workers.dev/). Code is kept separately in [papertrade-monitor](https://github.com/bibi45c/papertrade-monitor).
 
-D1 is the primary store, collecting once per minute and retaining 90 days. This repository pulls full stored snapshots each hour at minute 23 UTC. GitHub scheduling is best effort; a delayed run catches up and rechecks the preceding 48 hours. Archived files are retained after D1 retention expires. Repository visibility does not make the underlying public market source private.
+D1 is a short-term cache: it keeps every minute for 14 days and only the first row of each UTC hour up to 90 days (it hit the free 500 MB cap on 2026-10-27). A server pulls full stored snapshots every 15 minutes into a clone of this repository and pushes once a day at 00:30 UTC; each run rechecks the preceding 48 hours, so a delayed run catches up. Each run verifies that it fetched every row D1 holds in that read window (`window` on `/api/archive`), and an archived minute whose content changes is an error. Archived files are never deleted when D1 thins or expires rows.
 
 - `snapshots/YYYY/MM/DD/HH.jsonl.gz`: UTC hourly gzip shards. Each line contains the database minute `collectedAt` and the full original `snapshot`, including raw amount strings, order books, source timestamps and failures.
 - `manifest.json`: record count, first/last minute, uncompressed SHA-256 checksums, source failures, absent source counts, gaps and the matching D1 checkpoint. Missing fields stay null and failed reads are preserved. No historical value is synthesized.
-- `.github/workflows/archive.yml`: hourly pull and manual runs. Only this repository's built-in `GITHUB_TOKEN` writes commits; no wallet, trading key, Cloudflare token or personal GitHub token is stored.
+- Pushes come from the server with a repository-scoped deploy key (write access to this repository only), committed as `papertrade-archiver`. `.github/workflows/archive.yml` is manual-only (`workflow_dispatch`) as a fallback and commits with the built-in `GITHUB_TOKEN`; do not re-enable its schedule while the server timer runs, or the two will race. No wallet, trading key, Cloudflare token or personal GitHub token is stored.
 
 Run locally with Python 3.12 or later, using only its standard library:
 

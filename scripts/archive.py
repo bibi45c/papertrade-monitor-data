@@ -158,13 +158,16 @@ def archive(root, base_url=DEFAULT_URL, fetcher=fetch_page, through=None, public
     # Re-read 48 hours to recover late inserts or an interrupted run; older shards
     # are retained even after D1's 90-day retention removes the online originals.
     after = 0 if full else max(0, (before['lastAt'] or 0) - 2 * 86_400_000)
-    through = int(time.time() * 1000) if through is None else through
-    added = 0; available = None; complete = False
+    # Stay three minutes behind the clock so the minute being written cannot race the count check.
+    through = int(time.time() * 1000) - 180_000 if through is None else through
+    added = 0; available = None; complete = False; window = None; fetched = 0
     while not complete:
         page = fetcher(base_url, after, through, public_dns)
         if page.get('version') != 1 or page.get('through') != through or type(page.get('complete')) is not bool or not isinstance(page.get('rows'), list):
             raise ValueError('Invalid archive page schema')
         available = page['available']; rows = page['rows']
+        if window is None and isinstance(page.get('window'), dict) and page['window'].get('after') == after:
+            window = page['window']
         cursor = after
         for row in rows:
             at = validate_row(row)
@@ -173,7 +176,7 @@ def archive(root, base_url=DEFAULT_URL, fetcher=fetch_page, through=None, public
             cursor = at
         if page.get('nextAfter') != cursor or (not page['complete'] and not rows):
             raise ValueError('Invalid next archive cursor')
-        added += merge_rows(root, rows); after = cursor; complete = page['complete']
+        added += merge_rows(root, rows); fetched += len(rows); after = cursor; complete = page['complete']
     result = manifest_for(root, previous)
     oldest, latest = available.get('oldestAt'), available.get('latestAt')
     matched = 0; online_digest = hashlib.sha256()
@@ -181,11 +184,19 @@ def archive(root, base_url=DEFAULT_URL, fetcher=fetch_page, through=None, public
         for row in read_shard(path):
             if oldest is not None and oldest <= row['collectedAt'] <= latest:
                 matched += 1; online_digest.update(canonical(row))
-    if matched != available['count']:
+    if window is not None:
+        # D1 keeps full minutes for 14 days and one row per hour after that, so its total no longer
+        # equals the archive. Instead every row D1 holds in the read window must have been fetched;
+        # merge_rows already rejects any fetched row whose content differs from the archive.
+        if fetched != window['count']:
+            raise ValueError('Archive count does not match D1 read window; keep partial files and rerun')
+    elif matched != available['count']:
         raise ValueError('Archive count does not match D1 available history; keep partial files and rerun with --full to repair older gaps')
     # No changing wall clock is persisted, so identical repeated runs do not commit.
     result['checkpoint'] = {'d1OldestAt': oldest, 'd1LatestAt': latest, 'd1Count': available['count'],
                             'matchedCount': matched, 'sha256': online_digest.hexdigest()}
+    if window is not None:
+        result['checkpoint'].update({'windowAfter': window['after'], 'windowCount': window['count'], 'fetchedCount': fetched})
     encoded = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + '\n'
     temp = manifest_path.with_suffix('.tmp'); temp.write_text(encoded, encoding='utf-8'); temp.replace(manifest_path)
     print(json.dumps({'added': added, 'archived': result['count'], 'd1Count': available['count'], 'matched': matched, 'sourceFailures': result['sourceFailures'], 'sourceMissing': result['sourceMissing'], 'gaps': result['gaps']}))

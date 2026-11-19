@@ -1,7 +1,6 @@
 name: Archive public market data
+# Scheduled pulls moved to the archive server (see README); this workflow is a manual fallback.
 on:
-  schedule:
-    - cron: '23 * * * *'
   workflow_dispatch:
     inputs:
       full:

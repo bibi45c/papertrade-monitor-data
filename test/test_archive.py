@@ -26,6 +26,25 @@ class ArchiveTest(unittest.TestCase):
             self.assertEqual(first['count'], 4); self.assertEqual(first['sourceFailures']['paperBbo'], 4)
             self.assertEqual(module.read_shard(module.shard_path(root, 60_000))[0], rows[0])
 
+    def test_thinned_d1_passes_window_check_and_missed_rows_fail(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = pathlib.Path(folder); hour = 3_600_000
+            full = [self.row(hour * h + 60_000 * m) for h in range(1, 4) for m in range(3)]
+            def make_fetch(online, drop=None):
+                def fetch(base, after, through, public_dns):
+                    remaining = [r for r in online if after < r['collectedAt'] <= through]; page = remaining[:2]
+                    served = [r for r in page if r is not drop]
+                    return {'version': 1, 'through': through, 'rows': served, 'nextAfter': served[-1]['collectedAt'] if served else after,
+                            'complete': len(remaining) <= 2, 'window': {'after': after, 'count': len(remaining)},
+                            'available': {'oldestAt': online[0]['collectedAt'], 'latestAt': online[-1]['collectedAt'], 'count': len(online)}}
+                return fetch
+            module.archive(root, fetcher=make_fetch(full), through=5 * hour)
+            thinned = [r for r in full if r['collectedAt'] % hour == 0 or r["collectedAt"] >= 3 * hour]
+            result = module.archive(root, fetcher=make_fetch(thinned), through=5 * hour)
+            self.assertEqual(result['count'], 9); self.assertEqual(result['checkpoint']['windowCount'], result['checkpoint']['fetchedCount'])
+            with self.assertRaisesRegex(ValueError, 'count does not match D1 read window'):
+                module.archive(root, fetcher=make_fetch(thinned, drop=thinned[0]), through=5 * hour)
+
     def test_partial_run_is_recoverable_without_silent_mutation(self):
         with tempfile.TemporaryDirectory() as folder:
             root = pathlib.Path(folder); row = self.row(60_000)
