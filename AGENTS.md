@@ -7,5 +7,6 @@
 - 服务器只用仅对本仓库有写权限的部署密钥提交，手动 workflow 用本仓库自带的 `GITHUB_TOKEN`。禁止存储账户凭据、钱包、私钥或个人交易数据。
 - 验收命令以 README 和 workflow 为准；归档脚本仅依赖 Python 标准库，workflow 使用 Python 3.12。
 - 未知、故障与过期字段不能替换为零。相同分钟必须幂等；数据变更、分页异常和数量不匹配必须报错。缺失分钟和来源字段失败分别记录。
+- `chain-backfill/` 保存按区块读取的链上状态（每 5 分钟，含区块号与原始整数），只用于补分钟归档缺失的字段，与 `snapshots/` 分开存放、不得合并；`series/exposure-series.json` 由首尔服务器每天用 `scripts/build_series.py` 从两者生成。`scripts/chain_backfill.mjs` 为一次性 Node 复现脚本，归档主流程仍只依赖 Python 标准库。
 - 新架构、安全边界、数据删除、付费和生产变更遵守用户全局审批。批准的恢复方式是停用服务器定时器（必要时恢复 workflow 定时）、回退 Worker，保留两处数据。
 - 此文件首版人工审核后，修改必须先提供完整 diff 并取得明确批准。
