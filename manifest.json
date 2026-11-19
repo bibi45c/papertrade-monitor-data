@@ -1,12 +1,15 @@
 {
   "checkpoint": {
-    "d1Count": 22632,
-    "d1LatestAt": 1794963720000,
+    "d1Count": 530,
+    "d1LatestAt": 1795063080000,
     "d1OldestAt": 1791644880000,
-    "matchedCount": 22632,
-    "sha256": "5392f2dbe45d45927bfa9b25a3a37597ad69532d8a142d50d9e28300bf9ab9c2"
+    "fetchedCount": 48,
+    "matchedCount": 22671,
+    "sha256": "abbbb063185166768e40abec0b6fc3e74f3ea9e8c1006a7b215acc60ca9c6b38",
+    "windowAfter": 1794890040000,
+    "windowCount": 48
   },
-  "count": 22632,
+  "count": 22671,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -858,10 +861,15 @@
       "after": 1794952920000,
       "before": 1794963660000,
       "missingMinutes": 178
+    },
+    {
+      "after": 1794963720000,
+      "before": 1795060800000,
+      "missingMinutes": 1617
     }
   ],
-  "lastAt": 1794963720000,
-  "sha256": "5392f2dbe45d45927bfa9b25a3a37597ad69532d8a142d50d9e28300bf9ab9c2",
+  "lastAt": 1795063080000,
+  "sha256": "abbbb063185166768e40abec0b6fc3e74f3ea9e8c1006a7b215acc60ca9c6b38",
   "shards": [
     {
       "count": 52,
@@ -3022,25 +3030,30 @@
       "count": 2,
       "path": "snapshots/2026/11/18/01.jsonl.gz",
       "sha256": "cd41f0a04efc8a99d53b4617cb5e34e7578fa49e928dc6093d72812a5d713e18"
+    },
+    {
+      "count": 39,
+      "path": "snapshots/2026/11/19/04.jsonl.gz",
+      "sha256": "9c8dde4fb19bf404571728ae8d4ec75c805e57400406e6be04866f08c52c1227"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
   "sourceFailures": {
-    "book_BTC": 27,
+    "book_BTC": 28,
     "book_ETH": 27,
     "book_HYPE": 3,
     "context": 24,
     "executionQueue": 1259,
-    "governance": 1776,
-    "jumps": 21868,
+    "governance": 1797,
+    "jumps": 21907,
     "paperActivity": 2,
     "paperBbo": 659,
-    "protocolHistory": 2,
+    "protocolHistory": 3,
     "queue": 1,
     "trading": 469
   },
   "sourceMissing": {
-    "book_HYPE": 19219,
+    "book_HYPE": 19258,
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
