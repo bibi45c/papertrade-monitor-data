@@ -1,15 +1,15 @@
 {
   "checkpoint": {
-    "d1Count": 745,
-    "d1LatestAt": 1795075980000,
+    "d1Count": 1687,
+    "d1LatestAt": 1795134420000,
     "d1OldestAt": 1791644880000,
-    "fetchedCount": 263,
-    "matchedCount": 22886,
-    "sha256": "2ba5690ac495474802c74ed21ccf09cae1868c40d4ff4502c77fc43fc4f20d7f",
-    "windowAfter": 1794902640000,
-    "windowCount": 263
+    "fetchedCount": 1230,
+    "matchedCount": 23860,
+    "sha256": "1fcf10cd3a71b64195d28bb08e758cd66cab0425eb3ce021b8f3522bb8ab2095",
+    "windowAfter": 1794961140000,
+    "windowCount": 1230
   },
-  "count": 22886,
+  "count": 23860,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -868,8 +868,8 @@
       "missingMinutes": 1617
     }
   ],
-  "lastAt": 1795075980000,
-  "sha256": "2ba5690ac495474802c74ed21ccf09cae1868c40d4ff4502c77fc43fc4f20d7f",
+  "lastAt": 1795134420000,
+  "sha256": "1fcf10cd3a71b64195d28bb08e758cd66cab0425eb3ce021b8f3522bb8ab2095",
   "shards": [
     {
       "count": 52,
@@ -3052,32 +3052,116 @@
       "sha256": "fafdfa862b2c7f77398bf794b48196dea88d2e0657e8706c3abdebe416ff7ec6"
     },
     {
-      "count": 14,
+      "count": 60,
       "path": "snapshots/2026/11/19/08.jsonl.gz",
-      "sha256": "14c426388063c5dd800a0124145ca0ba2ef08f01afe9c41b3cf970a08409a72c"
+      "sha256": "bd83b07909a58cd534bc330fceaf9e6794635d35b61e33d1bfc19ac8793580d7"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/09.jsonl.gz",
+      "sha256": "68c7e7b1bea220495072887ed3a8d8a170c081b8354f46cf2d35f27431995ac7"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/10.jsonl.gz",
+      "sha256": "50f9e41d3c3eb9315dfef6d86dd3e0b2c9a99db76a10b726678b55bd97e13ddd"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/11.jsonl.gz",
+      "sha256": "990d2f548d1d4d88b4aa033c6629cc8f16e1418e7b28ba9b8805c465200d219d"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/12.jsonl.gz",
+      "sha256": "1b04f4152bf292d54d467a136d862308fd5217ca76f10744d734eb4e6f7210b7"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/13.jsonl.gz",
+      "sha256": "df92e5216ad6d69120000f290388815da3ea33029cc48564611a4c8383d2d019"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/14.jsonl.gz",
+      "sha256": "da75184414e62b93b393ea224cb74147424921a63f6e0efdcd642d987cd021d8"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/15.jsonl.gz",
+      "sha256": "ca06f00d1040a876e87bf980b27ba016d7ad50a1c2860272f209d0f11c9f1c35"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/16.jsonl.gz",
+      "sha256": "115ca92ef0bbd88fc5f76c2510e7d325831abe706a336edec5e4ae735f0316e8"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/17.jsonl.gz",
+      "sha256": "eb2e55ac561f2aab41205030c7ff28bfae084bb13ced7a465591f7dcd886e1b4"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/18.jsonl.gz",
+      "sha256": "7d8aae6672976876240e54d9704c190102de5a73acc0af574e1b4623fa274741"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/19.jsonl.gz",
+      "sha256": "0cb2f862d10ff75509efaf8d09885285221f191b5f8de095a30d27b97ca84d5a"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/20.jsonl.gz",
+      "sha256": "d68fe7f8e3f5a8fc38a8f65080d7a1a2c667329726d4fade3b05152a85272825"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/21.jsonl.gz",
+      "sha256": "69742e63e620e5e91ecd90c845984aac65ec802f6c26e16f7258a036148f459a"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/22.jsonl.gz",
+      "sha256": "5da7c96651968a1d7b08d46120457eefc7d9edc7f209f594e94b7ce110d25dfc"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/19/23.jsonl.gz",
+      "sha256": "d7ebd051c0eac51e58d6de18d0cd0cf786354d75026b7d95986c90ac9f4f0c2f"
+    },
+    {
+      "count": 28,
+      "path": "snapshots/2026/11/20/00.jsonl.gz",
+      "sha256": "b0d1f5b3588de8931fbc1427488ab695ca38b154da7b2533cfbee0806168b40b"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
   "sourceFailures": {
-    "book_BTC": 28,
+    "book_BTC": 29,
     "book_ETH": 27,
     "book_HYPE": 3,
     "context": 24,
-    "executionQueue": 1262,
-    "governance": 1980,
-    "jumps": 22122,
+    "executionQueue": 1265,
+    "governance": 2027,
+    "jumps": 23096,
     "paperActivity": 2,
-    "paperBbo": 661,
-    "protocolHistory": 3,
+    "paperBbo": 663,
+    "protocolHistory": 8,
     "queue": 1,
+    "tokenomics": 1,
+    "traderBook": 14,
     "trading": 469
   },
   "sourceMissing": {
-    "book_HYPE": 19473,
+    "book_HYPE": 20447,
     "executionQueue": 61,
     "governance": 764,
     "jumps": 764,
     "protocolHistory": 764,
+    "tokenomics": 22891,
+    "traderBook": 22891,
     "web": 3378
   },
   "timezone": "UTC",
