@@ -50,8 +50,10 @@ def public_dns_get(url):
         conn.close()
 
 
-def fetch_page(base_url, after, through, public_dns=False):
-    url = base_url.rstrip('/') + '/api/archive?' + urllib.parse.urlencode({'after': after, 'through': through, 'limit': 120})
+def fetch_page(base_url, after, through, public_dns=False, window=False):
+    # D1's free plan caps rows read per day: ask for the read-window count only on the first page.
+    query = {'after': after, 'through': through, 'limit': 120, **({'window': 1} if window else {})}
+    url = base_url.rstrip('/') + '/api/archive?' + urllib.parse.urlencode(query)
     for attempt in range(3):
         try:
             if public_dns:
@@ -150,19 +152,20 @@ def manifest_for(root, previous=None):
     return result
 
 
-def archive(root, base_url=DEFAULT_URL, fetcher=fetch_page, through=None, public_dns=False, full=False):
+def archive(root, base_url=DEFAULT_URL, fetcher=fetch_page, through=None, public_dns=False, full=False, recheck_hours=48):
     root = pathlib.Path(root); root.mkdir(parents=True, exist_ok=True)
     manifest_path = root / 'manifest.json'
     previous = json.loads(manifest_path.read_text(encoding='utf-8')) if manifest_path.exists() else None
     before = manifest_for(root, previous)
     # Re-read 48 hours to recover late inserts or an interrupted run; older shards
     # are retained even after D1's 90-day retention removes the online originals.
-    after = 0 if full else max(0, (before['lastAt'] or 0) - 2 * 86_400_000)
+    after = 0 if full else max(0, (before['lastAt'] or 0) - recheck_hours * 3_600_000)
     # Stay three minutes behind the clock so the minute being written cannot race the count check.
     through = int(time.time() * 1000) - 180_000 if through is None else through
     added = 0; available = None; complete = False; window = None; fetched = 0
     while not complete:
-        page = fetcher(base_url, after, through, public_dns)
+        first = window is None and fetched == 0
+        page = fetcher(base_url, after, through, public_dns, window=True) if first and fetcher is fetch_page else fetcher(base_url, after, through, public_dns)
         if page.get('version') != 1 or page.get('through') != through or type(page.get('complete')) is not bool or not isinstance(page.get('rows'), list):
             raise ValueError('Invalid archive page schema')
         available = page['available']; rows = page['rows']
@@ -206,7 +209,9 @@ def archive(root, base_url=DEFAULT_URL, fetcher=fetch_page, through=None, public
 def main():
     parser = argparse.ArgumentParser(); parser.add_argument('--root', default=str(pathlib.Path(__file__).resolve().parent.parent))
     parser.add_argument('--url', default=DEFAULT_URL); parser.add_argument('--public-dns', action='store_true'); parser.add_argument('--full', action='store_true')
-    args = parser.parse_args(); archive(args.root, args.url, public_dns=args.public_dns, full=args.full)
+    # Frequent pulls only need to re-read the last few hours; the daily run re-reads 48 hours for late inserts.
+    parser.add_argument('--recheck-hours', type=int, default=48)
+    args = parser.parse_args(); archive(args.root, args.url, public_dns=args.public_dns, full=args.full, recheck_hours=args.recheck_hours)
 
 
 if __name__ == '__main__':
