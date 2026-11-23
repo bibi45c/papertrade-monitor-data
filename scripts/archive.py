@@ -202,7 +202,7 @@ def archive(root, base_url=DEFAULT_URL, fetcher=fetch_page, through=None, public
         result['checkpoint'].update({'windowAfter': window['after'], 'windowCount': window['count'], 'fetchedCount': fetched})
     encoded = json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + '\n'
     temp = manifest_path.with_suffix('.tmp'); temp.write_text(encoded, encoding='utf-8'); temp.replace(manifest_path)
-    print(json.dumps({'added': added, 'archived': result['count'], 'd1Count': available['count'], 'matched': matched, 'sourceFailures': result['sourceFailures'], 'sourceMissing': result['sourceMissing'], 'gaps': result['gaps']}))
+    print(json.dumps({'added': added, 'archived': result['count'], 'd1Count': available['count'], 'matched': matched, 'sourceFailures': result['sourceFailures'], 'sourceMissing': result['sourceMissing'], 'gaps': len(result['gaps']), 'missingMinutes': sum(g['missingMinutes'] for g in result['gaps'])}))
     return result
 
 
