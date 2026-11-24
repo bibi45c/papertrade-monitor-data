@@ -1,15 +1,15 @@
 {
   "checkpoint": {
     "d1Count": null,
-    "d1LatestAt": 1795393620000,
+    "d1LatestAt": 1795480020000,
     "d1OldestAt": 1791644880000,
     "fetchedCount": 2888,
-    "matchedCount": 28180,
-    "sha256": "94d2735b3c16525a67120998c4a7c4e4f29ea097601aae801eda6a5095964448",
-    "windowAfter": 1795220340000,
+    "matchedCount": 29620,
+    "sha256": "16ff0ffc48824093487f597d5f9927e0a67b0e3797bf18cf66dc6ce2bf661c71",
+    "windowAfter": 1795306740000,
     "windowCount": 2888
   },
-  "count": 28180,
+  "count": 29620,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -868,8 +868,8 @@
       "missingMinutes": 1617
     }
   ],
-  "lastAt": 1795393620000,
-  "sha256": "94d2735b3c16525a67120998c4a7c4e4f29ea097601aae801eda6a5095964448",
+  "lastAt": 1795480020000,
+  "sha256": "16ff0ffc48824093487f597d5f9927e0a67b0e3797bf18cf66dc6ce2bf661c71",
   "shards": [
     {
       "count": 52,
@@ -3492,30 +3492,150 @@
       "sha256": "66b729af843ab184eddc918964a08c62be49a33375270fd649f907cd04c97109"
     },
     {
-      "count": 28,
+      "count": 60,
       "path": "snapshots/2026/11/23/00.jsonl.gz",
-      "sha256": "6f09049d873b2616cfb79ea1415ae1ad200e74ba6afa1ba84df061296321d97d"
+      "sha256": "4bec6fd5afbfe6236cba28770b4cfca1c56ca0a0b5bdb89d5b5d593d370954f1"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/01.jsonl.gz",
+      "sha256": "8847dfc02fe62b47ae19c50d8a661c5006e46de53acd9f68e0e2ffef2c198e78"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/02.jsonl.gz",
+      "sha256": "78d9ddeb2b012b32350e2d9b63e755f99086177c891b4111fb6de29c03fb705a"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/03.jsonl.gz",
+      "sha256": "d5414feb3154398cd46dd3776bc13e5af93328667a8a5f3ff36a18c85baaefee"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/04.jsonl.gz",
+      "sha256": "fbb37438d4909a2fcdbf69c2256dade98b94225bc1bc42fc0f37da49d19ce8f2"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/05.jsonl.gz",
+      "sha256": "3600f22f115958c00dee197c4d2e1ec8f3acca5ae932194c2f4be612c203d2d5"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/06.jsonl.gz",
+      "sha256": "6b0e7dc99b5b12d699c44459d40a3ac86d209eeb5e865a292c83611e92827c1f"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/07.jsonl.gz",
+      "sha256": "eba56e02a68cb7f605068953097014e4870e4352925f286c177feaafad17ff94"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/08.jsonl.gz",
+      "sha256": "64d4ab9d7098be22e7f623c8a7ea9ae764c71972b01aa816afe2cfcc90263d34"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/09.jsonl.gz",
+      "sha256": "6127f0471b2e801cc178a28ce180aeca101ac7597fd9302db508e049f086c0ff"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/10.jsonl.gz",
+      "sha256": "ec9bcf2ef998281108f4039d837d95097df9060331d2abad058731aaeaae20d4"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/11.jsonl.gz",
+      "sha256": "03e565a1cb9657945ed71c8973be9208494e4628eb878b51bcca5d299804b900"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/12.jsonl.gz",
+      "sha256": "f3fcb3143dabdbbce6350b176a98036fdb332edd87939a710d763bcb19e70359"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/13.jsonl.gz",
+      "sha256": "90fc124de7bc63544dc911bffacfc8b59912358d0ed171e98555049766fb88d6"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/14.jsonl.gz",
+      "sha256": "23fa2fa838f285edf604f4b522d0013673f8de29d85cd4a64f5f131fc2aea52c"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/15.jsonl.gz",
+      "sha256": "e9076ccb16eeb8aa7b2c6bf8c87a9fd63896022081db6698076c653487baaf0c"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/16.jsonl.gz",
+      "sha256": "d65117b960455818fe5cc1bb4177cca870b8c2716fefe46a410693eb197c6ba3"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/17.jsonl.gz",
+      "sha256": "34cca419ceb07425885408540f122027a3eedc0b0d5d0c3d6f431ac280639b19"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/18.jsonl.gz",
+      "sha256": "6abaf66e2e040236a3c327e743e235cd9f2d7d6a9d2ed3d8293e6dd48eb2c956"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/19.jsonl.gz",
+      "sha256": "19ecf20872cc3d8da326f7afec8cb68c451692a334b8e2dbfcc5b4cccd2b985f"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/20.jsonl.gz",
+      "sha256": "23469f96040fdbfd7ed3152ef2733f4a6109b67cf40a51069c573200e4457612"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/21.jsonl.gz",
+      "sha256": "57743e04efb9fef848994bb1d282b6068aa53572630cfc6f6b3d1a49b424c6ae"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/22.jsonl.gz",
+      "sha256": "a032bf956fb460edb6f72e316cd861ecaecc7dd4ff71d65f823d8822a084d037"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/23/23.jsonl.gz",
+      "sha256": "2ec94c2f155babda003ffda846fcd502bb41617daad95c5f53929bd1a0df899a"
+    },
+    {
+      "count": 28,
+      "path": "snapshots/2026/11/24/00.jsonl.gz",
+      "sha256": "826bbba6728b287dd3b5812370eb1fe25b851f001ac2e9462aca9da9f7548834"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
   "sourceFailures": {
-    "book_BTC": 32,
-    "book_ETH": 30,
+    "book_BTC": 33,
+    "book_ETH": 31,
     "book_HYPE": 3,
-    "context": 27,
-    "executionQueue": 1313,
-    "governance": 2047,
-    "jumps": 27416,
+    "context": 28,
+    "executionQueue": 1322,
+    "governance": 2067,
+    "jumps": 28856,
     "paperActivity": 2,
-    "paperBbo": 667,
+    "paperBbo": 668,
     "protocolHistory": 8,
     "queue": 1,
     "tokenomics": 3,
-    "traderBook": 103,
+    "traderBook": 118,
     "trading": 469
   },
   "sourceMissing": {
-    "book_HYPE": 24767,
+    "book_HYPE": 26207,
     "executionQueue": 61,
     "governance": 980,
     "jumps": 764,
