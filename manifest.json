@@ -1,15 +1,15 @@
 {
   "checkpoint": {
     "d1Count": null,
-    "d1LatestAt": 1795480020000,
+    "d1LatestAt": 1795566420000,
     "d1OldestAt": 1791644880000,
     "fetchedCount": 2888,
-    "matchedCount": 29620,
-    "sha256": "16ff0ffc48824093487f597d5f9927e0a67b0e3797bf18cf66dc6ce2bf661c71",
-    "windowAfter": 1795306740000,
+    "matchedCount": 31060,
+    "sha256": "3b9c586901d195e3413fc37a13ccfc18284158e65a8338d83f5e4d5aceae358d",
+    "windowAfter": 1795393140000,
     "windowCount": 2888
   },
-  "count": 29620,
+  "count": 31060,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -868,8 +868,8 @@
       "missingMinutes": 1617
     }
   ],
-  "lastAt": 1795480020000,
-  "sha256": "16ff0ffc48824093487f597d5f9927e0a67b0e3797bf18cf66dc6ce2bf661c71",
+  "lastAt": 1795566420000,
+  "sha256": "3b9c586901d195e3413fc37a13ccfc18284158e65a8338d83f5e4d5aceae358d",
   "shards": [
     {
       "count": 52,
@@ -3612,37 +3612,157 @@
       "sha256": "2ec94c2f155babda003ffda846fcd502bb41617daad95c5f53929bd1a0df899a"
     },
     {
-      "count": 28,
+      "count": 60,
       "path": "snapshots/2026/11/24/00.jsonl.gz",
-      "sha256": "826bbba6728b287dd3b5812370eb1fe25b851f001ac2e9462aca9da9f7548834"
+      "sha256": "6c7d196cdc93eebfdb3de216efaa9b0e905a94d5961ed856e972f0e67186f6ad"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/01.jsonl.gz",
+      "sha256": "eed5cf0e71685ed83246278943a72d6eafeafd975d8b95439ebd5e51ee830fcc"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/02.jsonl.gz",
+      "sha256": "cecb68d54eb93b344e62c1a4cf8b536d7e21c9bd20511831b9ef5a5465569473"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/03.jsonl.gz",
+      "sha256": "e72d9484d0cf65dd03afc119999aaee77949d827de80b913ea48ca0435cfe22f"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/04.jsonl.gz",
+      "sha256": "450c07d5acb3f352ba321096adfbb7808bb599b8ae95e1e3cad50bc828613ebf"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/05.jsonl.gz",
+      "sha256": "63c9acb6e4af1b3854fae26d333967af56e8e408489f9c31bf65a3aa02d31547"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/06.jsonl.gz",
+      "sha256": "a706af9a55e590bdd87a85ee6f626573943d0eee0fbf242d0571be7b07acb526"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/07.jsonl.gz",
+      "sha256": "806c503bca9f5e3745eaaba79eb050298f54f6056931015e1d0aeb2e9798f0f5"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/08.jsonl.gz",
+      "sha256": "fef62c153fb8585d81e2261858c7078b47ba8182c686d28b5b439efea6ed59c2"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/09.jsonl.gz",
+      "sha256": "fe03be8bda1fad0fc6e69923022af0838afb55fcf71fcabc47d100f70893ae4f"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/10.jsonl.gz",
+      "sha256": "e23a73fdc60b20e2cace4f1ac000e0da8e1d4fbecb0b854d834e924a8ff9e20d"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/11.jsonl.gz",
+      "sha256": "2bc7d33698544900aa86a81d56d1e64be7cfe834e44a87de10237439189df730"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/12.jsonl.gz",
+      "sha256": "02535e8561ef07c42adb8c0a2c8b711552420d7bd3c913c682b264bac8cca797"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/13.jsonl.gz",
+      "sha256": "844275e552a38016c6282472ac3dfbcc45a98bd3b53685590ed768cdb258798e"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/14.jsonl.gz",
+      "sha256": "d526226dd131963ddbd7c436d5e0ca7bfdc530f7e3bca8891a6b22dd1a2e103a"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/15.jsonl.gz",
+      "sha256": "b40504c43556a842029a8fc575da7b0d4a44d7bc99372840596dd76f6f318179"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/16.jsonl.gz",
+      "sha256": "7e1c7173b8a9a96348799106dc00a3fc251d64f545697c8c10b410ac016545c9"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/17.jsonl.gz",
+      "sha256": "d59c13b7b4d97f6389e9ed09502f1a62c0f68119601ebf653fbb6ccce8531ca5"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/18.jsonl.gz",
+      "sha256": "c8bbb28a30813f5199766277961b528c6d8af25eba54d99d81d74f6f8dc63266"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/19.jsonl.gz",
+      "sha256": "f34304505fe4654bec91cc4189b7b36718b0cfd597cba2f6da7813eb8f8908aa"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/20.jsonl.gz",
+      "sha256": "68abcda609fb0740f23ad5f39626cf8f98c2bc2021ab24692d1c97acaec82bd8"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/21.jsonl.gz",
+      "sha256": "ab57a2184d8e0ddc63c15c35c85a8b083b3fd10dbe1487a92a65403b959d3ab5"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/22.jsonl.gz",
+      "sha256": "3516c1de7e5f601d9f1a0e4f16b04e50f969c6800fe239a889f66aa98e46083a"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/24/23.jsonl.gz",
+      "sha256": "8236852c1836aecfb2b8768b9b8b0163c5d1cfb825f311e70335faec14e9e9ab"
+    },
+    {
+      "count": 28,
+      "path": "snapshots/2026/11/25/00.jsonl.gz",
+      "sha256": "78bb62a56021113d43a63d0a4446f0b1fbfb2e51d045d50b7b1e5b0d2ff7069d"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
   "sourceFailures": {
-    "book_BTC": 33,
-    "book_ETH": 31,
+    "book_BTC": 34,
+    "book_ETH": 32,
     "book_HYPE": 3,
-    "context": 28,
-    "executionQueue": 1322,
+    "context": 29,
+    "executionQueue": 1332,
     "governance": 2067,
-    "jumps": 28856,
+    "jumps": 30296,
     "paperActivity": 2,
-    "paperBbo": 668,
+    "paperBbo": 669,
     "protocolHistory": 8,
     "queue": 1,
-    "tokenomics": 3,
-    "traderBook": 118,
+    "tokenomics": 4,
+    "traderBook": 141,
     "trading": 469
   },
   "sourceMissing": {
-    "book_HYPE": 26207,
+    "book_HYPE": 27647,
     "executionQueue": 61,
-    "governance": 980,
+    "governance": 1059,
     "jumps": 764,
-    "protocolHistory": 980,
+    "protocolHistory": 1059,
     "tokenomics": 22891,
     "traderBook": 22891,
-    "web": 3594
+    "web": 3673
   },
   "timezone": "UTC",
   "version": 1
