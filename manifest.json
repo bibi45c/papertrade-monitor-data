@@ -1,15 +1,15 @@
 {
   "checkpoint": {
     "d1Count": null,
-    "d1LatestAt": 1795739220000,
+    "d1LatestAt": 1795825620000,
     "d1OldestAt": 1791644880000,
     "fetchedCount": 2888,
-    "matchedCount": 33940,
-    "sha256": "818baf86cbea26e7cd4f75c1ddac848b8f29cd8e6eb4010dda4ea421264c6103",
-    "windowAfter": 1795565940000,
+    "matchedCount": 35380,
+    "sha256": "2ae12428787a5ca7e8c84b459825c2d558631ba5c2878f4bf4e95b8b25ac2b0f",
+    "windowAfter": 1795652340000,
     "windowCount": 2888
   },
-  "count": 33940,
+  "count": 35380,
   "firstAt": 1791644880000,
   "gaps": [
     {
@@ -868,8 +868,8 @@
       "missingMinutes": 1617
     }
   ],
-  "lastAt": 1795739220000,
-  "sha256": "818baf86cbea26e7cd4f75c1ddac848b8f29cd8e6eb4010dda4ea421264c6103",
+  "lastAt": 1795825620000,
+  "sha256": "2ae12428787a5ca7e8c84b459825c2d558631ba5c2878f4bf4e95b8b25ac2b0f",
   "shards": [
     {
       "count": 52,
@@ -3972,9 +3972,129 @@
       "sha256": "33f4e9ec005d52f73b3b1a93f202a330a834b6da27fddd2249d50fa8b74641f1"
     },
     {
-      "count": 28,
+      "count": 60,
       "path": "snapshots/2026/11/27/00.jsonl.gz",
-      "sha256": "ead50c536e5f88ca6669ce07eaa72058e39e327e475524c06d829773f98150f6"
+      "sha256": "0bbf9e4108fe3e1319d71e2a4cffbf1df421b0a813549441161b5fe78266ef04"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/01.jsonl.gz",
+      "sha256": "56fd5731d790a8a96bcb2fc49d33f261aa651765e3e3e9e448f0688bb206814a"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/02.jsonl.gz",
+      "sha256": "a96724e4c08abb4175b3fdf3e3287f3292ccca3ac693e33f65ddb511298affcf"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/03.jsonl.gz",
+      "sha256": "ef49d5ab426b2c5e134ea2a5c4b2ac2edd33416f3394f37a81870ea10eedf922"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/04.jsonl.gz",
+      "sha256": "804e507bbc0911d88b9b3b800716d6df31f4cadbb0fbc16e516e74b486be93a5"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/05.jsonl.gz",
+      "sha256": "a9290f378f21b4e1e6183b79496a9830b678d4361a5624dc4984eae9e6acc50c"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/06.jsonl.gz",
+      "sha256": "8dd37318e3f177aa6624b4ce6d0d6db3c3719e0e30bf62fdce0f501bcdc1bdc0"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/07.jsonl.gz",
+      "sha256": "fb825fb6dc7b814071c76bc374d209be01b0d92a599662caf8693d0c6b99744a"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/08.jsonl.gz",
+      "sha256": "74d259db504da2f0dfa427c6345050974bfa69f71a33c7ab3e41294e3baefcb0"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/09.jsonl.gz",
+      "sha256": "71bf785a851de26b7f31ee97bf866576c9c108b7d679fbf7fea13c54557ddc30"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/10.jsonl.gz",
+      "sha256": "9420850b32e91c1530e4e7f8bcbdf0bc93a1e6ead71c0ee976b0a7cc5c574d57"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/11.jsonl.gz",
+      "sha256": "ed88d0ee510718832c277dfdeb1a8fa7cdacbf173005a1f9b6512243d8627e25"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/12.jsonl.gz",
+      "sha256": "290eb7c81e76e7d474e80fe92136fb6afda4d88cb949ef636555197af4672470"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/13.jsonl.gz",
+      "sha256": "211055267ecb489229b99d8b284e96d09cb9ff492ef49cc71fd5eadee3a6773d"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/14.jsonl.gz",
+      "sha256": "4035c5f434559a00ef9b3abc5acd4c9ed851ce5a917c5087fd0a09aec5189d45"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/15.jsonl.gz",
+      "sha256": "96263e118d0a2a17f014486dfcf0d14ba17081a854b8a24a3e0423569f9d155e"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/16.jsonl.gz",
+      "sha256": "a2800a19f419ce8bb42991d3a57e85e4b0e277bb74f17a2e90300bd23e6251b3"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/17.jsonl.gz",
+      "sha256": "7432a201d4cc322301810149a99b8f3d86791042849fc1034b08bedf15c82356"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/18.jsonl.gz",
+      "sha256": "df5f61504ba891f9d10b4ec1bdf611aee61dfa69988bd538bc69eb8fee792aa4"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/19.jsonl.gz",
+      "sha256": "4d9923eb485e8991b881a9b3871e9661c6c2cb6e71afd7871de8169d589ce550"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/20.jsonl.gz",
+      "sha256": "fdb98e38790403619d950d4b0c469b358ba4583e3dfa6b5eb529aa23c4ef11a4"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/21.jsonl.gz",
+      "sha256": "dde5fd2f35cf5387eec37f790825756e7daab1945cd627d1df5963819b922753"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/22.jsonl.gz",
+      "sha256": "ee26516ee5e07211fa23b9bf69ef22a787bd439c6ebf6b4317f2a18525a67450"
+    },
+    {
+      "count": 60,
+      "path": "snapshots/2026/11/27/23.jsonl.gz",
+      "sha256": "eae1c767f5d7f95a6a183ebbfa485a92e67aa9910d576f91077840f22a23c7cc"
+    },
+    {
+      "count": 28,
+      "path": "snapshots/2026/11/28/00.jsonl.gz",
+      "sha256": "19b4873bcfebe8b73557e422f92515c0eabe33b1bff24b5c4410d90db8e0cfbb"
     }
   ],
   "source": "https://papertrade-monitor.papertrade-monitor.workers.dev/api/archive",
@@ -3983,19 +4103,19 @@
     "book_ETH": 32,
     "book_HYPE": 3,
     "context": 29,
-    "executionQueue": 1497,
+    "executionQueue": 1528,
     "governance": 2077,
-    "jumps": 33176,
+    "jumps": 34616,
     "paperActivity": 2,
     "paperBbo": 670,
     "protocolHistory": 8,
     "queue": 1,
     "tokenomics": 4,
-    "traderBook": 172,
+    "traderBook": 191,
     "trading": 469
   },
   "sourceMissing": {
-    "book_HYPE": 30527,
+    "book_HYPE": 31967,
     "executionQueue": 61,
     "governance": 1059,
     "jumps": 764,
